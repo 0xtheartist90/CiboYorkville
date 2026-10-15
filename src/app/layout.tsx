@@ -28,7 +28,13 @@ const title = 'Cibo Wine Bar Yorkville | Italian Restaurant & Wine Bar on Yorkvi
 const description =
     'Handmade pasta, pizza from the open kitchen and a 2,500-bottle wine room at 133 Yorkville Ave, Toronto. Half-price drinks Thursday and Friday from 2 to 6:30pm, half-price pizza Tuesdays and $15 pasta Wednesdays. Call to reserve.';
 
+// Absolute base for the share image: Vercel's production domain when deployed, the dev server locally.
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'http://localhost:3001';
+
 export const metadata: Metadata = {
+    metadataBase: new URL(siteUrl),
     title,
     description,
     openGraph: {
