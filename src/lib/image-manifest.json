@@ -1,0 +1,240 @@
+{
+ "/images/dining-marquee.jpg": {
+  "w": 2100,
+  "h": 1400,
+  "variants": [
+   {
+    "src": "/images/dining-marquee-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/dining-marquee-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/glass-room.jpg": {
+  "w": 2100,
+  "h": 1393,
+  "variants": [
+   {
+    "src": "/images/glass-room-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/glass-room-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/life-is-beautiful.jpg": {
+  "w": 4000,
+  "h": 2666,
+  "variants": [
+   {
+    "src": "/images/life-is-beautiful-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/life-is-beautiful-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/marquee-kitchen.jpg": {
+  "w": 2736,
+  "h": 1824,
+  "variants": [
+   {
+    "src": "/images/marquee-kitchen-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/marquee-kitchen-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/open-kitchen.jpg": {
+  "w": 2100,
+  "h": 1336,
+  "variants": [
+   {
+    "src": "/images/open-kitchen-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/open-kitchen-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/pappardelle-spread.jpg": {
+  "w": 3427,
+  "h": 5141,
+  "variants": [
+   {
+    "src": "/images/pappardelle-spread-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/pappardelle-spread-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/pasta-gnocchi.jpg": {
+  "w": 2500,
+  "h": 1667,
+  "variants": [
+   {
+    "src": "/images/pasta-gnocchi-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/pasta-gnocchi-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/pizza-yolk.jpg": {
+  "w": 2500,
+  "h": 1667,
+  "variants": [
+   {
+    "src": "/images/pizza-yolk-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/pizza-yolk-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/prosciutto-pizza.jpg": {
+  "w": 2920,
+  "h": 3629,
+  "variants": [
+   {
+    "src": "/images/prosciutto-pizza-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/prosciutto-pizza-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/room-florence.jpg": {
+  "w": 3000,
+  "h": 2000,
+  "variants": [
+   {
+    "src": "/images/room-florence-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/room-florence-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/room-lower.jpg": {
+  "w": 3000,
+  "h": 2000,
+  "variants": [
+   {
+    "src": "/images/room-lower-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/room-lower-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/room-napoli.jpg": {
+  "w": 3000,
+  "h": 2000,
+  "variants": [
+   {
+    "src": "/images/room-napoli-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/room-napoli-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/room-semi.jpg": {
+  "w": 3000,
+  "h": 2000,
+  "variants": [
+   {
+    "src": "/images/room-semi-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/room-semi-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/room-social.jpg": {
+  "w": 3000,
+  "h": 2000,
+  "variants": [
+   {
+    "src": "/images/room-social-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/room-social-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/salmon-rose.jpg": {
+  "w": 2833,
+  "h": 4249,
+  "variants": [
+   {
+    "src": "/images/salmon-rose-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/salmon-rose-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/wine-bar.jpg": {
+  "w": 2100,
+  "h": 1388,
+  "variants": [
+   {
+    "src": "/images/wine-bar-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/wine-bar-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/wine-dispensers.jpg": {
+  "w": 2100,
+  "h": 1425,
+  "variants": [
+   {
+    "src": "/images/wine-dispensers-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/wine-dispensers-lg.webp",
+    "w": 1800
+   }
+  ]
+ }
+}
