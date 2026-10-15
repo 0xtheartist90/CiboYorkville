@@ -219,6 +219,14 @@ const Page = () => {
                             <br />
                             at Cibo
                         </h2>
+                        <div className='mt-8 aspect-[4/3] overflow-hidden'>
+                            <LightboxImage
+                                src='/images/dining-marquee.jpg'
+                                sizes='(max-width: 767px) 100vw, 40vw'
+                                alt='The dining room at Cibo Yorkville with long wooden tables beneath the lit CIBO letters'
+                                className='h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]'
+                            />
+                        </div>
                         <CallButton className='mt-8 hidden md:inline-flex' />
                     </Reveal>
 
@@ -247,7 +255,7 @@ const Page = () => {
                 </div>
             </section>
 
-            {/* ── The wine room: graphite, the 2,500 in marquee bulbs, the wall beside it ── */}
+            {/* ── The wine room: graphite, the 2,500 set large in gold, the wall beside it ── */}
             <section id='wine' className='overflow-hidden bg-[#17181a] text-[#f7f5f1]'>
                 <div className='grid md:grid-cols-2'>
                     <div className='relative min-h-[380px] md:order-2 md:min-h-[720px]'>
@@ -260,10 +268,10 @@ const Page = () => {
                     </div>
                     <Reveal className='px-6 py-16 md:order-1 md:px-14 md:py-24 lg:px-20'>
                         <div className='eyebrow text-[#f2c46d]'>The Wine Room</div>
-                        <div className='font-display bulbs bulbs-glow mt-6 text-[7.5rem] leading-[0.85] md:text-[11rem]'>
+                        <div className='font-display mt-6 text-[7.5rem] leading-[0.85] font-black text-[#f2c46d] md:text-[11rem]'>
                             2,500
                         </div>
-                        <div className='font-display mt-2 text-3xl md:text-4xl'>Bottles on the wall</div>
+                        <div className='font-display mt-5 text-3xl md:mt-7 md:text-4xl'>Bottles on the wall</div>
                         <p className='mt-6 max-w-md text-lg leading-relaxed text-[#f7f5f1]/75'>
                             A soaring glass wine room runs the length of the bar, stocked from the Alps to Sicily.
                             Twenty-four wines are poured by the glass, all half price at Cibo Sociale on Thursday and
@@ -421,9 +429,18 @@ const Page = () => {
                 </div>
             </section>
 
-            {/* ── Prenota: wine red, heading and call side by side, the horizontal booking bar below ── */}
-            <section id='reserve' className='bg-[#7a1f2b] px-6 py-20 text-[#f7f5f1] md:px-12 md:py-24'>
-                <div className='mx-auto max-w-6xl'>
+            {/* ── Prenota: the open kitchen full-bleed behind a dark wash, heading and call side by side,
+                 the horizontal booking bar below ── */}
+            <section id='reserve' className='relative overflow-hidden bg-[#17181a] text-[#f7f5f1]'>
+                <ResponsiveImg
+                    src='/images/marquee-kitchen.jpg'
+                    sizes='100vw'
+                    alt=''
+                    loading='lazy'
+                    className='absolute inset-0 h-full w-full object-cover object-[50%_30%]'
+                />
+                <div className='absolute inset-0 bg-[#17181a]/75' />
+                <div className='relative mx-auto max-w-6xl px-6 py-24 md:px-12 md:py-32'>
                     <Reveal className='grid gap-8 md:grid-cols-[1fr_auto] md:items-end'>
                         <div>
                             <div className='eyebrow text-[#f7f5f1]/70'>Prenota</div>

@@ -288,19 +288,6 @@
     background: #7a1f2b;
     color: #f7f5f1;
   }
-
-  /* Marquee-bulb lettering, after the lit CIBO letters over Yorkville's open kitchen:
-     the type is filled with a grid of warm dots instead of solid colour. */
-  .bulbs {
-    background-image: radial-gradient(circle, #f2c46d 0 42%, transparent 50%);
-    background-size: 0.085em 0.085em;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .bulbs-glow {
-    filter: drop-shadow(0 0 0.06em rgb(242 196 109 / 0.55));
-  }
 }
 
 /* Hero copy fades up on load */
