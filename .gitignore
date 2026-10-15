@@ -37,3 +37,4 @@ next-env.d.ts
 
 # raw source assets (not deployed)
 /raw-assets
+.env*

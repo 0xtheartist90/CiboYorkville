@@ -74,7 +74,7 @@ const WEEK = [
     { when: 'Saturday & Sunday · 11am to 3pm', title: 'Brunch', text: 'Weekend brunch from the open kitchen.' }
 ];
 
-// Two rows of plates. Each photo grows in proportion to its width, so every row fills the line
+// Three rows of plates. Each photo grows in proportion to its width, so every row fills the line
 // at one height and nothing is cropped.
 const PLATE_ROWS = [
     [
@@ -96,14 +96,41 @@ const PLATE_ROWS = [
     ],
     [
         {
+            src: '/images/tagliatelle-mushroom.jpg',
+            caption: 'Tagliatelle ai Funghi',
+            alt: 'Tagliatelle with wild mushrooms and shaved parmigiano'
+        },
+        {
+            src: '/images/grilled-calamari.jpg',
+            caption: 'Grilled Calamari',
+            alt: 'Grilled whole calamari over greens with diced tomato and lemon'
+        },
+        {
             src: '/images/pizza-yolk.jpg',
             caption: 'Pizza',
             alt: 'Blistered pizza with yellow cherry tomatoes, greens and shaved parmigiano'
         },
         {
-            src: '/images/pappardelle-spread.jpg',
+            src: '/images/pappardelle-ragu.jpg',
             caption: 'Pappardelle',
-            alt: 'Pappardelle in lamb ragu with basil and pecorino, with plates to share around it'
+            alt: 'Fresh pappardelle in ragu with basil'
+        }
+    ],
+    [
+        {
+            src: '/images/short-rib-eggs.jpg',
+            caption: 'Weekend Brunch',
+            alt: 'Braised short rib with crispy onions, mushrooms and two fried eggs'
+        },
+        {
+            src: '/images/table-toast.jpg',
+            caption: 'Salute',
+            alt: 'Glasses raised over a table of pizza, pasta and plates to share'
+        },
+        {
+            src: '/images/pappardelle-spread.jpg',
+            caption: 'To Share',
+            alt: 'Pappardelle in lamb ragu with burrata, prosciutto and plates to share around it'
         },
         {
             src: '/images/open-kitchen.jpg',
@@ -208,8 +235,7 @@ const Page = () => {
             <section id='week' className='px-6 py-20 md:px-12 md:py-28'>
                 <div className='mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16'>
                     <Reveal className='md:sticky md:top-28 md:self-start'>
-                        <div className='eyebrow text-[#7a1f2b]'>Ogni settimana</div>
-                        <h2 className='font-display mt-4 text-5xl leading-[0.92] md:text-7xl'>
+                        <h2 className='font-display text-5xl leading-[0.92] md:text-7xl'>
                             Every week
                             <br />
                             at Cibo
@@ -262,8 +288,7 @@ const Page = () => {
                         />
                     </div>
                     <Reveal className='px-6 py-16 md:order-1 md:px-14 md:py-24 lg:px-20'>
-                        <div className='eyebrow text-[#f2c46d]'>The Wine Room</div>
-                        <div className='font-display mt-6 text-[7.5rem] leading-[0.85] font-black text-[#f2c46d] md:text-[11rem]'>
+                        <div className='font-display text-[7.5rem] leading-[0.85] font-black text-[#f2c46d] md:text-[11rem]'>
                             2,500
                         </div>
                         <div className='font-display mt-5 text-3xl md:mt-7 md:text-4xl'>Bottles on the wall</div>
@@ -291,8 +316,7 @@ const Page = () => {
             <section id='food' className='px-4 py-20 md:px-8 md:py-28'>
                 <Reveal className='mx-auto grid max-w-6xl gap-6 px-2 md:grid-cols-2 md:items-end md:px-4'>
                     <div>
-                        <div className='eyebrow text-[#7a1f2b]'>Al Banco</div>
-                        <h2 className='font-display mt-4 text-5xl leading-[0.92] md:text-7xl'>
+                        <h2 className='font-display text-5xl leading-[0.92] md:text-7xl'>
                             Made in front
                             <br />
                             of you
@@ -304,7 +328,7 @@ const Page = () => {
                     </p>
                 </Reveal>
 
-                {/* Phones: one swipeable strip at a fixed height. Larger screens: two rows. */}
+                {/* Phones: one swipeable strip at a fixed height. Larger screens: three rows. */}
                 <Reveal className='mx-auto mt-12 max-w-7xl'>
                     <div className='-mx-4 flex snap-x scroll-px-4 gap-2 overflow-x-auto px-4 [scrollbar-width:none] md:mx-0 md:block md:space-y-2 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden'>
                         {PLATE_ROWS.map((row, r) => (
@@ -326,7 +350,7 @@ const Page = () => {
                                             sizes='(max-width: 767px) 70vw, 40vw'
                                             className='h-full w-full object-cover'
                                         />
-                                        <figcaption className='eyebrow pointer-events-none absolute bottom-0 left-0 bg-[#f7f5f1] px-3 py-2 text-[0.62rem] text-[#17181a]'>
+                                        <figcaption className='eyebrow pointer-events-none absolute bottom-0 left-0 bg-[#f7f5f1] px-3 py-2 text-[0.62rem] whitespace-nowrap text-[#17181a]'>
                                             {plate.caption}
                                         </figcaption>
                                     </figure>
@@ -371,15 +395,14 @@ const Page = () => {
                 <div className='absolute inset-0 bg-[#17181a]/70' />
                 <div className='relative mx-auto flex min-h-[600px] max-w-6xl flex-col justify-center px-6 py-24 text-[#f7f5f1] md:min-h-[78vh] md:px-12'>
                     <Reveal>
-                        <div className='eyebrow text-[#f2c46d]'>Thursday to Saturday · Until 1am</div>
-                        <h2 className='font-stencil mt-6 text-6xl leading-[0.9] md:text-[9.5rem]'>
+                        <h2 className='font-stencil text-6xl leading-[0.9] md:text-[9.5rem]'>
                             Life is
                             <br />
                             beautiful
                         </h2>
                         <p className='mt-8 max-w-md text-lg leading-relaxed text-[#f7f5f1]/80'>
                             Old world rustic meets industrial chic: a vibrant bar, a patio on Yorkville Avenue and a
-                            room made for a long night out.
+                            room made for a long night out. Open until 1am, Thursday to Saturday.
                         </p>
                         <CallButton variant='light' label='Book Your Night' className='mt-10' />
                     </Reveal>
@@ -391,8 +414,7 @@ const Page = () => {
                 <div className='mx-auto max-w-7xl'>
                     <Reveal className='grid gap-8 md:grid-cols-[1.1fr_1fr] md:items-end'>
                         <div>
-                            <div className='eyebrow text-[#7a1f2b]'>Private Dining & Events</div>
-                            <h2 className='font-display mt-4 text-5xl leading-[0.92] md:text-7xl'>
+                            <h2 className='font-display text-5xl leading-[0.92] md:text-7xl'>
                                 Rooms for 14
                                 <br />
                                 to 200
@@ -438,8 +460,7 @@ const Page = () => {
                 <div className='relative mx-auto max-w-6xl px-6 py-24 md:px-12 md:py-32'>
                     <Reveal className='grid gap-8 md:grid-cols-[1fr_auto] md:items-end'>
                         <div>
-                            <div className='eyebrow text-[#f7f5f1]/70'>Prenota</div>
-                            <h2 className='font-display mt-4 text-6xl leading-[0.9] md:text-8xl'>Save your seat</h2>
+                            <h2 className='font-display text-6xl leading-[0.9] md:text-8xl'>Save your seat</h2>
                             <p className='mt-5 max-w-lg text-lg text-[#f7f5f1]/80'>
                                 133 Yorkville Ave at Avenue Road. Open every day from 11:30am, and from 11am on
                                 weekends.
@@ -463,12 +484,11 @@ const Page = () => {
                 <div className='mx-auto max-w-6xl px-6 pt-20 md:px-12 md:pt-24'>
                     <div className='grid gap-12 md:grid-cols-[1.3fr_1fr]'>
                         <div className='text-center md:text-left'>
-                            <div className='eyebrow text-[#f2c46d]'>Ci vediamo a Yorkville</div>
                             <a
                                 href={MAPS_HREF}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='font-display mt-4 block text-5xl leading-[0.92] transition-colors hover:text-[#f2c46d] md:text-7xl'>
+                                className='font-display block text-5xl leading-[0.92] transition-colors hover:text-[#f2c46d] md:text-7xl'>
                                 133 Yorkville
                                 <br />
                                 Avenue

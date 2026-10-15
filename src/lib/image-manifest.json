@@ -27,6 +27,20 @@
    }
   ]
  },
+ "/images/grilled-calamari.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   {
+    "src": "/images/grilled-calamari-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/grilled-calamari-lg.webp",
+    "w": 1080
+   }
+  ]
+ },
  "/images/life-is-beautiful.jpg": {
   "w": 4000,
   "h": 2666,
@@ -66,6 +80,20 @@
    {
     "src": "/images/open-kitchen-lg.webp",
     "w": 1800
+   }
+  ]
+ },
+ "/images/pappardelle-ragu.jpg": {
+  "w": 1080,
+  "h": 1350,
+  "variants": [
+   {
+    "src": "/images/pappardelle-ragu-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/pappardelle-ragu-lg.webp",
+    "w": 1080
    }
   ]
  },
@@ -205,6 +233,48 @@
    },
    {
     "src": "/images/salmon-rose-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/short-rib-eggs.jpg": {
+  "w": 1536,
+  "h": 1920,
+  "variants": [
+   {
+    "src": "/images/short-rib-eggs-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/short-rib-eggs-lg.webp",
+    "w": 1536
+   }
+  ]
+ },
+ "/images/table-toast.jpg": {
+  "w": 4000,
+  "h": 6000,
+  "variants": [
+   {
+    "src": "/images/table-toast-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/table-toast-lg.webp",
+    "w": 1800
+   }
+  ]
+ },
+ "/images/tagliatelle-mushroom.jpg": {
+  "w": 3534,
+  "h": 5301,
+  "variants": [
+   {
+    "src": "/images/tagliatelle-mushroom-sm.webp",
+    "w": 800
+   },
+   {
+    "src": "/images/tagliatelle-mushroom-lg.webp",
     "w": 1800
    }
   ]
