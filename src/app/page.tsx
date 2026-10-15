@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 
 import CiboLogo from '@/components/cibo-logo';
+import HeroSlideshow from '@/components/hero-slideshow';
 import LightboxImage from '@/components/lightbox-image';
 import MenuTabs from '@/components/menu-tabs';
 import OpenTableWidget from '@/components/opentable-widget';
@@ -166,17 +167,11 @@ const Page = () => {
                 </div>
             </nav>
 
-            {/* ── Hero: the bar and its wine wall full-bleed, the wordmark and one line low on the left,
+            {/* ── Hero: three views of the room crossfading full-bleed, the wordmark and one line low on the left,
                  and a horizontal booking bar floating over the bottom edge. Phones get the bar below. ── */}
             <section id='top' className='relative mt-16 lg:h-[calc(100svh-4rem)] lg:min-h-[700px]'>
                 <div className='relative h-[64svh] min-h-[440px] overflow-hidden bg-[#17181a] lg:absolute lg:inset-0 lg:h-auto'>
-                    <ResponsiveImg
-                        src='/images/wine-bar.jpg'
-                        sizes='100vw'
-                        alt='The bar at Cibo Yorkville with a lit wall of wine bottles and white leather stools'
-                        fetchPriority='high'
-                        className='hero-zoom absolute inset-0 h-full w-full object-cover object-[60%_50%]'
-                    />
+                    <HeroSlideshow />
                     <div className='absolute inset-0 bg-gradient-to-t from-[#17181a]/90 via-[#17181a]/40 to-[#17181a]/10 lg:bg-gradient-to-r lg:from-[#17181a]/80 lg:via-[#17181a]/25 lg:to-transparent' />
                     <div className='absolute inset-x-0 bottom-0 hidden h-64 bg-gradient-to-t from-[#17181a]/70 to-transparent lg:block' />
 

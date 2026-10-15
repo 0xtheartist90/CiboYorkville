@@ -302,15 +302,6 @@
   animation: hero-in 0.9s ease-out 0.45s both;
 }
 
-/* Slow push-in on the hero photo */
-@keyframes hero-zoom {
-  from { transform: scale(1.08); }
-  to   { transform: scale(1); }
-}
-.hero-zoom {
-  animation: hero-zoom 9s ease-out both;
-}
-
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -323,7 +314,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-in, .hero-in-late, .hero-zoom { animation: none; }
+  .hero-in, .hero-in-late { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
