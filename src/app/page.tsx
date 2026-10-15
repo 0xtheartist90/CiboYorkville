@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 
 import CiboLogo from '@/components/cibo-logo';
+import FoodMarquee from '@/components/food-marquee';
 import HeroSlideshow from '@/components/hero-slideshow';
 import LightboxImage from '@/components/lightbox-image';
 import MenuTabs from '@/components/menu-tabs';
@@ -74,7 +75,7 @@ const WEEK = [
     { when: 'Saturday & Sunday · 11am to 3pm', title: 'Brunch', text: 'Weekend brunch from the open kitchen.' }
 ];
 
-// Three rows of plates. Each photo grows in proportion to its width, so every row fills the line
+// Two rows of plates. Each photo grows in proportion to its width, so every row fills the line
 // at one height and nothing is cropped.
 const PLATE_ROWS = [
     [
@@ -96,41 +97,14 @@ const PLATE_ROWS = [
     ],
     [
         {
-            src: '/images/tagliatelle-mushroom.jpg',
-            caption: 'Tagliatelle ai Funghi',
-            alt: 'Tagliatelle with wild mushrooms and shaved parmigiano'
-        },
-        {
-            src: '/images/grilled-calamari.jpg',
-            caption: 'Grilled Calamari',
-            alt: 'Grilled whole calamari over greens with diced tomato and lemon'
-        },
-        {
             src: '/images/pizza-yolk.jpg',
             caption: 'Pizza',
             alt: 'Blistered pizza with yellow cherry tomatoes, greens and shaved parmigiano'
         },
         {
-            src: '/images/pappardelle-ragu.jpg',
-            caption: 'Pappardelle',
-            alt: 'Fresh pappardelle in ragu with basil'
-        }
-    ],
-    [
-        {
-            src: '/images/short-rib-eggs.jpg',
-            caption: 'Weekend Brunch',
-            alt: 'Braised short rib with crispy onions, mushrooms and two fried eggs'
-        },
-        {
-            src: '/images/table-toast.jpg',
-            caption: 'Salute',
-            alt: 'Glasses raised over a table of pizza, pasta and plates to share'
-        },
-        {
             src: '/images/pappardelle-spread.jpg',
-            caption: 'To Share',
-            alt: 'Pappardelle in lamb ragu with burrata, prosciutto and plates to share around it'
+            caption: 'Pappardelle',
+            alt: 'Pappardelle in lamb ragu with basil and pecorino, with plates to share around it'
         },
         {
             src: '/images/open-kitchen.jpg',
@@ -240,11 +214,11 @@ const Page = () => {
                             <br />
                             at Cibo
                         </h2>
-                        <div className='mt-8 aspect-[4/3] overflow-hidden'>
+                        <div className='mt-8 aspect-[4/5] overflow-hidden'>
                             <LightboxImage
-                                src='/images/dining-marquee.jpg'
+                                src='/images/table-toast.jpg'
                                 sizes='(max-width: 767px) 100vw, 40vw'
-                                alt='The dining room at Cibo Yorkville with long wooden tables beneath the lit CIBO letters'
+                                alt='Glasses raised over a table of pizza, pasta and plates to share'
                                 className='h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]'
                             />
                         </div>
@@ -328,7 +302,7 @@ const Page = () => {
                     </p>
                 </Reveal>
 
-                {/* Phones: one swipeable strip at a fixed height. Larger screens: three rows. */}
+                {/* Phones: one swipeable strip at a fixed height. Larger screens: two rows. */}
                 <Reveal className='mx-auto mt-12 max-w-7xl'>
                     <div className='-mx-4 flex snap-x scroll-px-4 gap-2 overflow-x-auto px-4 [scrollbar-width:none] md:mx-0 md:block md:space-y-2 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden'>
                         {PLATE_ROWS.map((row, r) => (
@@ -381,6 +355,11 @@ const Page = () => {
                         </a>
                     </Reveal>
                 </div>
+            </section>
+
+            {/* ── A slow strip of dishes running under the menu ── */}
+            <section aria-label='From the kitchen' className='pb-20 md:pb-28'>
+                <FoodMarquee />
             </section>
 
             {/* ── Life is Beautiful: the stencilled wall from the Napoli room ── */}

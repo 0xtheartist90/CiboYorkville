@@ -302,6 +302,16 @@
   animation: hero-in 0.9s ease-out 0.45s both;
 }
 
+/* Food strip under the menu: the doubled track slides left by half its width for a seamless loop */
+@keyframes food-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.food-marquee {
+  animation: food-marquee 70s linear infinite;
+  will-change: transform;
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -314,7 +324,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-in, .hero-in-late { animation: none; }
+  .hero-in, .hero-in-late, .food-marquee { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
