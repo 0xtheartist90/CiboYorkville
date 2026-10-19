@@ -69,7 +69,7 @@ const RoomPanels = () => {
                             onMouseEnter={() => setActive(i)}
                             onFocus={() => setActive(i)}
                             onClick={() => setActive(i)}
-                            className={`group relative min-w-0 overflow-hidden text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(.2,.7,.2,1)] ${
+                            className={`group relative min-w-0 overflow-hidden rounded-[17px] text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(.2,.7,.2,1)] ${
                                 open ? 'grow-[5]' : 'grow'
                             } basis-0`}>
                             <ResponsiveImg
@@ -82,26 +82,28 @@ const RoomPanels = () => {
                             <div
                                 className={`absolute inset-0 transition-colors duration-700 ${
                                     open
-                                        ? 'bg-gradient-to-t from-[#17181a]/90 via-[#17181a]/20 to-transparent'
-                                        : 'bg-[#17181a]/55 group-hover:bg-[#17181a]/40'
+                                        ? 'bg-gradient-to-t from-[#2a1212]/90 via-[#2a1212]/20 to-transparent'
+                                        : 'bg-[#2a1212]/55 group-hover:bg-[#2a1212]/40'
                                 }`}
                             />
                             {/* Closed panels: the name runs up the side */}
                             <span
-                                className={`font-display absolute bottom-6 left-1/2 origin-left -translate-x-1/2 text-2xl whitespace-nowrap text-[#f7f5f1] transition-opacity duration-300 [writing-mode:vertical-rl] rotate-180 ${
+                                className={`font-display absolute bottom-6 left-1/2 origin-left -translate-x-1/2 rotate-180 text-2xl whitespace-nowrap text-[#f6efef] transition-opacity duration-300 [writing-mode:vertical-rl] ${
                                     open ? 'opacity-0' : 'opacity-100 delay-300'
                                 }`}>
                                 {room.name}
                             </span>
                             {/* Open panel: name, size and a line about the room */}
                             <div
-                                className={`absolute inset-x-0 bottom-0 p-8 text-[#f7f5f1] transition-all duration-500 ${
+                                className={`absolute inset-x-0 bottom-0 p-8 text-[#f6efef] transition-all duration-500 ${
                                     open ? 'translate-y-0 opacity-100 delay-300' : 'translate-y-4 opacity-0'
                                 }`}>
-                                <div className='eyebrow text-[#f2c46d]'>{room.note}</div>
-                                <div className='font-display mt-2 text-5xl whitespace-nowrap lg:text-6xl'>{room.name}</div>
+                                <div className='eyebrow text-[#f3c2b4]'>{room.note}</div>
+                                <div className='font-display mt-2 text-5xl whitespace-nowrap lg:text-6xl'>
+                                    {room.name}
+                                </div>
                                 <div className='mt-1 text-lg font-bold'>{room.size}</div>
-                                <p className='mt-3 max-w-md text-[0.95rem] leading-relaxed text-[#f7f5f1]/80'>
+                                <p className='mt-3 max-w-md text-[0.95rem] leading-relaxed text-[#f6efef]/80'>
                                     {room.desc}
                                 </p>
                             </div>
@@ -115,7 +117,7 @@ const RoomPanels = () => {
                     const open = i === active;
 
                     return (
-                        <li key={room.name} className='relative overflow-hidden bg-[#17181a]'>
+                        <li key={room.name} className='relative overflow-hidden rounded-[17px] bg-[#2a1212]'>
                             <button
                                 type='button'
                                 aria-expanded={open}
@@ -135,17 +137,17 @@ const RoomPanels = () => {
                                     <div
                                         className={`absolute inset-0 ${
                                             open
-                                                ? 'bg-gradient-to-t from-[#17181a]/95 via-[#17181a]/30 to-transparent'
-                                                : 'bg-[#17181a]/60'
+                                                ? 'bg-gradient-to-t from-[#2a1212]/95 via-[#2a1212]/30 to-transparent'
+                                                : 'bg-[#2a1212]/60'
                                         }`}
                                     />
-                                    <div className='absolute inset-x-0 bottom-0 p-5 text-[#f7f5f1]'>
+                                    <div className='absolute inset-x-0 bottom-0 p-5 text-[#f6efef]'>
                                         <div className='font-display text-[1.7rem] leading-none whitespace-nowrap'>
                                             {room.name}
                                         </div>
                                         <div className='mt-1.5 text-sm'>
                                             <span className='font-bold'>{room.size}</span>
-                                            <span className='text-[#f2c46d]'> · {room.note}</span>
+                                            <span className='text-[#f3c2b4]'> · {room.note}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +156,7 @@ const RoomPanels = () => {
                                 className={`grid transition-[grid-template-rows] duration-500 ${
                                     open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
                                 }`}>
-                                <p className='overflow-hidden px-5 text-[0.95rem] leading-relaxed text-[#f7f5f1]/75'>
+                                <p className='overflow-hidden px-5 text-[0.95rem] leading-relaxed text-[#f6efef]/75'>
                                     <span className='block pb-5'>{room.desc}</span>
                                 </p>
                             </div>

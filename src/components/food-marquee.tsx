@@ -29,7 +29,7 @@ const FoodMarquee = () => (
                     sizes='(max-width: 767px) 50vw, 25vw'
                     loading='lazy'
                     style={{ aspectRatio: aspect(dish.src) }}
-                    className='mr-2 h-[220px] w-auto shrink-0 md:h-[320px]'
+                    className='mr-3 h-[220px] w-auto shrink-0 rounded-[17px] md:h-[320px]'
                 />
             ))}
         </div>

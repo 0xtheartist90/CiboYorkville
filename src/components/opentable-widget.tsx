@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 
-// Cibo Wine Bar Yorkville on OpenTable, in the page's light limestone and wine colours.
+// Cibo Wine Bar Yorkville on OpenTable, in the new site's blush and tomato red.
 // The wide (horizontal) theme on large screens, OpenTable's standard (compact) theme below 1024px.
 const loaderSrc = (theme: 'wide' | 'standard') =>
-    `https://www.opentable.ca/widget/reservation/loader?rid=187567&type=standard&theme=${theme}&color=1&dark=false&iframe=false&domain=ca&lang=en-CA&newtab=false&ot_source=Restaurant%20website&font=arial&ot_logo=standard&primary_color=f7f5f1&primary_font_color=17181a&button_color=7a1f2b&button_font_color=ffffff&cfe=true`;
+    `https://www.opentable.ca/widget/reservation/loader?rid=187567&type=standard&theme=${theme}&color=1&dark=false&iframe=false&domain=ca&lang=en-CA&newtab=false&ot_source=Restaurant%20website&font=arial&ot_logo=standard&primary_color=f6efef&primary_font_color=3e1c1c&button_color=cf2327&button_font_color=f3e8d8&cfe=true`;
 
 const OpenTableWidget = ({
     theme = 'auto',
@@ -24,10 +24,10 @@ const OpenTableWidget = ({
             style.id = 'ot-widget-overrides';
             style.textContent = [
                 '.ot-dtp-picker .ot-title{display:none!important}',
-                // Their button colour setting is ignored; match the page's wine red and square corners.
-                '.ot-dtp-picker .ot-dtp-picker-button{background:#7a1f2b!important;border-color:#7a1f2b!important;color:#fff!important;border-radius:0!important;font-weight:700!important;letter-spacing:.04em}',
-                '.ot-dtp-picker .ot-dtp-picker-button:hover{background:#17181a!important;border-color:#17181a!important}',
-                '.ot-dtp-picker .ot-dtp-picker-selector,.ot-dtp-picker .ot-dtp-picker-selector-link{border-radius:0!important}',
+                // Their button colour setting is ignored; match the site's red pill buttons.
+                '.ot-dtp-picker .ot-dtp-picker-button{background:#cf2327!important;border-color:#cf2327!important;color:#f3e8d8!important;border-radius:9999px!important;font-weight:600!important;letter-spacing:.08em}',
+                '.ot-dtp-picker .ot-dtp-picker-button:hover{background:#3e1c1c!important;border-color:#3e1c1c!important}',
+                '.ot-dtp-picker .ot-dtp-picker-selector,.ot-dtp-picker .ot-dtp-picker-selector-link{border-radius:9999px!important}',
                 // Desktop only: drop the widget's dark panel and the leftover white form strip.
                 // The mobile standard theme needs its own backgrounds, so it stays untouched.
                 '@media (min-width:768px){',

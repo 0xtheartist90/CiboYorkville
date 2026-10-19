@@ -1,27 +1,21 @@
 import type { ReactNode } from 'react';
 
 import type { Metadata } from 'next';
-import { Big_Shoulders, Manrope, Stardos_Stencil } from 'next/font/google';
+import { Forum, Poppins } from 'next/font/google';
 
 import '@/app/globals.css';
 import SmoothScroll from '@/components/smooth-scroll';
 
-// A condensed industrial face for Yorkville's steel-and-glass room, Cibo's menu stencil for
-// the menu card and the "Life is Beautiful" wall, and a clean grotesque for reading.
-const display = Big_Shoulders({
+// The fonts of Cibo's new website: Forum for headings, Poppins for everything else.
+const forum = Forum({
     subsets: ['latin'],
-    weight: ['600', '700', '800', '900'],
+    weight: '400',
     variable: '--font-display'
 });
-const stencil = Stardos_Stencil({
+const poppins = Poppins({
     subsets: ['latin'],
-    weight: ['400', '700'],
-    variable: '--font-stencil'
-});
-const manrope = Manrope({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700', '800'],
-    variable: '--font-manrope'
+    weight: ['300', '400', '500', '600', '700'],
+    variable: '--font-sans'
 });
 
 const title = 'Cibo Wine Bar Yorkville | Italian Restaurant & Wine Bar on Yorkville Ave';
@@ -49,8 +43,7 @@ export const metadata: Metadata = {
 const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html lang='en'>
-            <body
-                className={`${display.variable} ${stencil.variable} ${manrope.variable} cibo-body overscroll-none antialiased`}>
+            <body className={`${forum.variable} ${poppins.variable} cibo-body overscroll-none antialiased`}>
                 <SmoothScroll />
                 {children}
             </body>
