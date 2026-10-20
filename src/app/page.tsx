@@ -185,7 +185,7 @@ const Page = () => {
             {/* ── Hero: three views of the room crossfading full-bleed under a warm brown wash, the wordmark
                  and one line low on the left, and a rounded booking bar floating over the bottom edge.
                  Phones get the bar below the photos. ── */}
-            <section id='top' className='relative mt-16 md:mt-[72px] lg:h-[calc(100svh-72px)] lg:min-h-[700px]'>
+            <section id='top' className='relative z-20 mt-16 md:mt-[72px] lg:h-[calc(100svh-72px)] lg:min-h-[700px]'>
                 <div className='relative h-[64svh] min-h-[440px] overflow-hidden bg-[#2a1212] lg:absolute lg:inset-0 lg:h-auto'>
                     <HeroSlideshow />
                     <div className='absolute inset-0 bg-gradient-to-t from-[#2a1212]/90 via-[#2a1212]/45 to-[#2a1212]/10 lg:bg-gradient-to-r lg:from-[#2a1212]/80 lg:via-[#2a1212]/30 lg:to-transparent' />
@@ -212,20 +212,21 @@ const Page = () => {
                     </div>
                 </div>
 
-                {/* The booking bar: OpenTable's wide, horizontal widget on large screens */}
-                <div className='hero-in-late border-b border-[#3e1c1c]/10 bg-[#ece8e8] px-6 py-7 lg:absolute lg:bottom-12 lg:left-20 lg:flex lg:w-fit lg:items-center lg:gap-10 lg:rounded-[17px] lg:border-0 lg:bg-[#f6efef] lg:px-10 lg:py-6 lg:shadow-[0_30px_80px_-30px_rgba(42,18,18,0.7)]'>
-                    <div className='flex items-baseline justify-between gap-6 lg:block lg:shrink-0 lg:border-r lg:border-[#3e1c1c]/15 lg:pr-10'>
+                {/* The booking bar: OpenTable's wide, horizontal widget on large screens. The hero sits above the next
+                     section so the widget's date and time dropdowns open over it instead of under it. */}
+                <div className='hero-in-late relative z-10 border-b border-[#3e1c1c]/10 bg-[#ece8e8] px-6 py-7 lg:absolute lg:bottom-12 lg:left-20 lg:w-fit lg:rounded-[17px] xl:flex xl:items-center xl:gap-10 lg:border-0 lg:bg-[#f6efef] lg:px-10 lg:py-6 lg:shadow-[0_30px_80px_-30px_rgba(42,18,18,0.7)]'>
+                    <div className='flex items-baseline justify-between gap-6 xl:block xl:shrink-0 xl:border-r xl:border-[#3e1c1c]/15 xl:pr-10'>
                         <div className='font-display text-2xl leading-none whitespace-nowrap text-[#3e1c1c] md:text-3xl'>
                             Book a Table
                         </div>
-                        <div className='eyebrow whitespace-nowrap text-[#cf2327] lg:mt-2'>Open 7 days</div>
+                        <div className='eyebrow whitespace-nowrap text-[#cf2327] xl:mt-2'>Open 7 days</div>
                     </div>
-                    <OpenTableWidget className='mt-5 flex w-full justify-center lg:mt-0 lg:justify-start' />
+                    <OpenTableWidget className='mt-5 flex w-full justify-center lg:justify-start xl:mt-0' />
                 </div>
             </section>
 
             {/* ── Every week: the week's offers as one clean list, heading and a rounded photo alongside ── */}
-            <section id='week' className='glow-top px-6 py-20 md:px-12 md:py-28'>
+            <section id='week' className='glow-top px-6 pt-24 pb-20 md:px-12 md:pt-36 md:pb-28'>
                 <div className='mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16'>
                     <Reveal className='md:sticky md:top-28 md:self-start'>
                         <h2 className='font-display text-5xl leading-[0.95] text-[#cf2327] md:text-7xl'>
@@ -447,7 +448,7 @@ const Page = () => {
 
             {/* ── Prenota: the open kitchen full-bleed behind a flat brown wash, heading and call side by side,
                  the rounded horizontal booking bar below ── */}
-            <section id='reserve' className='relative overflow-hidden bg-[#2a1212] text-[#f6efef]'>
+            <section id='reserve' className='relative z-10 bg-[#2a1212] text-[#f6efef]'>
                 <ResponsiveImg
                     src='/images/marquee-kitchen.jpg'
                     sizes='100vw'
@@ -456,7 +457,7 @@ const Page = () => {
                     className='absolute inset-0 h-full w-full object-cover object-[50%_30%]'
                 />
                 <div className='absolute inset-0 bg-[#2a1212]/75' />
-                <div className='relative mx-auto max-w-6xl px-6 py-24 md:px-12 md:py-32'>
+                <div className='relative mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32'>
                     <Reveal className='grid gap-8 md:grid-cols-[1fr_auto] md:items-end'>
                         <div>
                             <h2 className='font-display text-6xl leading-[0.92] md:text-8xl'>Save your seat</h2>
@@ -469,11 +470,11 @@ const Page = () => {
                     </Reveal>
                     <Reveal
                         delay={150}
-                        className='mt-12 rounded-[17px] bg-[#f6efef] px-6 py-7 text-[#3e1c1c] lg:flex lg:w-fit lg:items-center lg:gap-10 lg:px-10 lg:py-6'>
-                        <div className='font-display shrink-0 text-3xl leading-none lg:border-r lg:border-[#3e1c1c]/15 lg:pr-10'>
+                        className='mt-12 rounded-[17px] bg-[#f6efef] px-6 py-7 text-[#3e1c1c] lg:w-fit lg:px-8 lg:py-6 xl:flex xl:items-center xl:gap-8'>
+                        <div className='font-display shrink-0 text-3xl leading-none xl:border-r xl:border-[#3e1c1c]/15 xl:pr-8'>
                             Book Online
                         </div>
-                        <OpenTableWidget className='mt-5 flex w-full justify-center lg:mt-0 lg:justify-start' />
+                        <OpenTableWidget className='mt-5 flex w-full justify-center lg:justify-start xl:mt-0' />
                     </Reveal>
                 </div>
             </section>
